@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js"></script>
+    <title>Panel</title>
+  </head>
+  <body>
+    <header id='main-header'>
+      <ul>
+         <li><a href='index.html'>Home</a></li>
+         <li><a href='#'>Contact</a></li>
+         <li><a href='sign-in.html'>Sign Out</a></li>
+      </ul>
+    </header>
+
+    <div class="top-panel">
+      <center>
+        <img src="images/admin.png" alt="adminlogo" id="adminLogo">
+        <br>
+        <h4>Administrator panel</h4>
+      </center>
+    </div>
+
+    <div class="side-bar">
+      <ul>
+        <li>Dashboard</li>
+        <li>Settings</li>
+        <li>History</li>
+        <li>Developer</li>
+      </ul>
+    </div>
+
+    <div class="main-panel"><br>
+      <center><h1>Existing Meetups</h1></center>
+      <div class="meetup-list">
+          <img src="images/estate.jpg" alt="Estate management Meetup">
+          <h3 class="meetup-name">Estate Managers Meetup, Abuja</h3>
+          <p class="meetup-info"><span>Location: Abuja</span><span class="members">Members: 16</span></p>
+          <p class="meetup-info"><span>Date Created: November 15, 2018</span></p>
+          <p class="meetup-info"><span>Next Meeting: January 20, 2019</span></p>
+          <center><button class="btn-delete">Delete</button></center>
+      </div>
+      <div class="clr"></div>
+      <div class="meetup-list">
+          <img src="images/estate.jpg" alt="Estate management Meetup">
+          <h3 class="meetup-name">Estate Managers Meetup, Abuja</h3>
+          <p class="meetup-info"><span>Location: Abuja</span><span class="members">Members: 16</span></p>
+          <p class="meetup-info"><span>Date Created: November 15, 2018</span></p>
+          <p class="meetup-info"><span>Next Meeting: January 20, 2019</span></p>
+          <center><button class="btn-delete">Delete</button></center>
+      </div>
+      <div class="clr"></div>
+      <div class="meetup-list">
+          <img src="images/estate.jpg" alt="Estate management Meetup">
+          <h3 class="meetup-name">Estate Managers Meetup, Abuja</h3>
+          <p class="meetup-info"><span>Location: Abuja</span><span class="members">Members: 16</span></p>
+          <p class="meetup-info"><span>Date Created: November 15, 2018</span></p>
+          <p class="meetup-info"><span>Next Meeting: January 20, 2019</span></p>
+          <center><button class="btn-delete">Delete</button></center>
+      </div>
+
+    </div>
+
+    <div class="right-side-bar">
+      <center><h3>Create Meetup</h3></center>
+      <form class="my-form">
+        <div class="form-row">
+            <label>
+                <span>Name</span>
+                <input type="text" name="name">
+            </label>
+        </div>
+        <div class="form-row">
+            <label>
+                <span>Location</span>
+                <input type="text" name="name">
+            </label>
+        </div>
+          <div class="upload">
+              <center><div class="pic-box"></div>
+              <button class="btn-upload-pic">Upload Picture</button></center>
+          </div>
+          <div>
+              <button id="btn">Create</button>
+          </div>
+      </form>
+    </div>
+    <div class="clr">
+
+    </div>
+
+
+    <footer>
+      Copyright &copy; 2018 created by Benaiah Enebeli
+    </footer>
+  </body>
+</html>
