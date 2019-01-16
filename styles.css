@@ -1,0 +1,840 @@
+html{
+    background-color: #f3f3f3;
+}
+
+@import url(http://fonts.googleapis.com/css?family=Raleway);
+#main-header,
+#main-header ul,
+#main-header ul li,
+#main-header ul li a {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  list-style: none;
+  line-height: 1;
+  display: block;
+  position: relative;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+#main-header:after,
+#main-header > ul:after {
+  content: ".";
+  display: block;
+  clear: both;
+  visibility: hidden;
+  line-height: 0;
+  height: 0;
+}
+#main-header {
+  width: auto;
+  border-bottom: 3px solid #3db2e1;
+  font-family: Raleway, sans-serif;
+  line-height: 1;
+}
+#main-header ul {
+  background: #ffffff;
+  float: right;
+}
+#main-header > ul > li {
+  float: left;
+}
+#main-header.align-center > ul {
+  font-size: 0;
+  text-align: center;
+}
+#main-header.align-center > ul > li {
+  display: inline-block;
+  float: none;
+}
+#main-header.align-right > ul > li {
+  float: right;
+}
+#main-header.align-right > ul > li > a {
+  margin-right: 0;
+  margin-left: -4px;
+}
+#main-header > ul > li > a {
+  z-index: 2;
+  padding: 18px 25px 12px 25px;
+  font-size: 15px;
+  font-weight: bold;
+  text-decoration: none;
+  color: #444444;
+  -webkit-transition: all .2s ease;
+  -moz-transition: all .2s ease;
+  -ms-transition: all .2s ease;
+  -o-transition: all .2s ease;
+  transition: all .2s ease;
+  margin-right: -4px;
+}
+#main-header > ul > li.active > a,
+#main-header > ul > li:hover > a,
+#main-header > ul > li > a:hover {
+  color: #ffffff;
+}
+#main-header > ul > li > a:after {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  z-index: -1;
+  width: 100%;
+  height: 120%;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+  content: "";
+  -webkit-transition: all .2s ease;
+  -o-transition: all .2s ease;
+  transition: all .2s ease;
+  -webkit-transform: perspective(5px) rotateX(2deg);
+  -webkit-transform-origin: bottom;
+  -moz-transform: perspective(5px) rotateX(2deg);
+  -moz-transform-origin: bottom;
+  transform: perspective(5px) rotateX(2deg);
+  transform-origin: bottom;
+}
+#main-header > ul > li.active > a:after,
+#main-header > ul > li:hover > a:after,
+#main-header > ul > li > a:hover:after {
+  background: #3db2e1;
+}
+
+#about-us {
+    color: black;
+    padding: 0 5em 0 5em;
+    text-align: center;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 1.3em;
+}
+
+#join-meetup {
+    text-align: center;
+    text-decoration: underline;
+    font-size: 3rem;
+    font-weight: bold;
+    color: #4169E1;
+    padding: 0 auto 0 auto;
+    margin: 0 auto .5em auto;
+}
+
+#info {
+    width: 100%;
+    height: 200px;
+    text-align: center;
+    background-image: url(images/bg.jpg);
+    background-position: center;
+    background-blend-mode: lighten;
+}
+#info a{
+  text-decoration: none;
+}
+
+#btn {
+  display: block;
+  border-radius: 2px;
+  background-color:  #4169E1;
+  color: #ffffff;
+  font-weight: bold;
+  box-shadow: 1px 2px 4px 0 rgba(0, 0, 0, 0.08);
+  padding: 15px 35px;
+  border: 0;
+  margin: 55px auto 0;
+  cursor: pointer;
+}
+#btn:hover{
+  background-color: #3db2e1;
+  color: #000;
+}
+
+#current{
+	text-align: center;
+	width: 100%;
+	margin-top: 10px;
+  margin-bottom: 0;
+	color: #3db2e1;
+}
+
+.view-meetups {
+    box-sizing: border-box;
+    display: block;
+    width: 80%;
+    margin: 0 auto 1em auto;
+    padding-bottom: 20px;
+}
+.clr {
+    clear: both;
+}
+
+
+.entry {
+    width: 31%;
+    float: left;
+    margin: 10px;
+    height: 40%;
+    background-image: url("images/shadow.png");
+    background-repeat: no-repeat;
+    background-position: bottom;
+    box-sizing: border-box;
+}
+figure.fige {
+    display: block;
+    width: 13.7em;
+    height: 12em;
+    background-color: #4169E1;
+    padding: 5px;
+}
+
+figure.fige img {
+    width: 97.5%;
+    height: 10em;
+    border: 1px solid #d6d6d6;
+}
+
+figcaption.name-meetup {
+    background-image: url("images/icon.png");
+    background-repeat: no-repeat;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    text-align: center;
+    color: #000;
+}
+
+/*For smaller screen*/
+@media screen and (max-width: 600px) {
+  #about-us {
+      color: black;
+      padding: 1px;
+      text-align: center;
+      font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+      font-size: .8em;
+  }
+  .entry {
+      width: 90%;
+      float: left;
+      margin: 1px auto 1px auto;
+      height: 30%;
+      background-image: url("images/shadow.png");
+      background-repeat: no-repeat;
+      background-position: bottom;
+      box-sizing: border-box;
+  }
+  figure.fige {
+      display: block;
+      width: 15em;
+      height: 60%;
+      background-color: #e7e3d8;
+      margin: 3px;
+      padding: 1px;
+  }
+  figure.fige img {
+      width: 95%;
+      height: 10em;
+      padding: .2em;
+      border: 1px solid #d6d6d6;
+  }
+  .existing-meetups img {
+      float: left;
+      padding: 0;
+      width: 8em;
+      height: 8em;
+      margin: 0 5% 1em 1em;
+  }
+
+}
+
+/* Sign in page styling */
+.main-content{
+  margin-bottom: 3em;
+  margin-top: 1em;
+}
+.form-login{
+    max-width: 1000px;
+    width: 100%;
+    margin: 0 auto;
+    font: bold 14px sans-serif;
+    text-align: center;
+}
+
+.form-log-in-with-email{
+    position: relative;
+    display: inline-block;
+    vertical-align: top;
+    text-align: center;
+}
+
+.form-log-in-with-email .form-white-background{
+    width: 120%;
+    box-sizing: border-box;
+    background-color: #ffffff;
+    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1);
+    padding: 3rem 4rem;
+    margin-bottom: 32px;
+}
+
+.form-log-in-with-email .form-row{
+    text-align: left;
+    margin-bottom: 2em;
+}
+
+.form-log-in-with-email .form-title-row{
+    text-align: center;
+    margin-bottom: 2.5em;
+}
+
+.form-log-in-with-email h1{
+    display: inline-block;
+    box-sizing: border-box;
+    color:  #4c565e;
+    font-size: 2em;
+    padding: 0 30px 15px;
+    border-bottom: 2px solid #6caee0;
+    margin:0;
+}
+
+.form-log-in-with-email .form-row > label span{
+    display: inline-block;
+    box-sizing: border-box;
+    color:  #5f5f5f;
+    width: 125px;
+    text-align: right;
+    padding-right: 1.5em;
+}
+
+.form-log-in-with-email input{
+    color:  #5f5f5f;
+    background-color: rgba(125, 125, 125, .1);
+    box-sizing: border-box;
+    width: 230px;
+    font-size: 1em;
+    box-shadow: 1px 2px 4px 0 rgba(0, 0, 0, 0.08);
+    padding: 10px 12px;
+    border: 1px solid #dbdbdb;
+}
+
+.form-log-in-with-email button{
+    display: block;
+    border-radius: 2px;
+    background-color:  #4169E1;
+    color: #ffffff;
+    font-weight: bold;
+    box-shadow: 1px 2px 4px 0 rgba(0, 0, 0, 0.08);
+    padding: 15px 35px;
+    border: 0;
+    margin: 55px auto 0;
+    cursor: pointer;
+}
+
+.form-log-in-with-email .form-forgotten-password,
+.form-log-in-with-email .form-create-an-account{
+    text-decoration: none;
+    padding: 4px 8px;
+    font-weight: normal;
+    display: inline-block;
+}
+
+.form-log-in-with-email .form-forgotten-password{
+    color:  #4e9eda;
+}
+
+.form-log-in-with-email .form-create-an-account{
+    color:  #7b9d62;
+    background-color: #d6f0c3;
+}
+
+/* Signup form styling */
+.form-register{
+    max-width: 1000px;
+    width: 100%;
+    margin: 0 auto;
+
+    font: bold 14px sans-serif;
+    text-align: center;
+}
+
+.form-register-with-email{
+    position: relative;
+    display: inline-block;
+    vertical-align: top;
+    text-align: center;
+}
+
+.form-register-with-email .form-white-background{
+    width: 105%;
+    display: inline-block;
+    box-sizing: border-box;
+    background-color: #ffffff;
+    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.2);
+    padding: 3em 4em;
+    margin: 1em auto 1em auto;
+}
+
+.form-register-with-email .form-row{
+    text-align: left;
+    margin-bottom: 2em;
+}
+
+.form-register-with-email .form-title-row{
+    text-align: center;
+    margin-bottom: 2.5em;
+}
+
+.form-register-with-email h1{
+    display: inline-block;
+    box-sizing: border-box;
+    color:  #4c565e;
+    font-size: 2em;
+    padding: 0 20px 15px;
+    border-bottom: 2px solid #6caee0;
+    margin: 0;
+}
+
+.form-register-with-email .form-row > label span{
+    display: inline-block;
+    box-sizing: border-box;
+    color:  #5f5f5f;
+    width: 125px;
+    text-align: right;
+    padding-right: 1.5em;
+}
+
+.form-register-with-email input{
+    color:  #5f5f5f;
+    background-color: rgba(125, 125, 125, .1);
+    box-sizing: border-box;
+    font-size: 1em;
+    width: 230px;
+    box-shadow: 1px 2px 4px 0 rgba(0, 0, 0, 0.08);
+    padding: 10px 12px;
+    border: 1px solid #dbdbdb;
+}
+
+.form-register-with-email .form-checkbox input{
+    margin-left: 128px;
+    margin-right: 10px;
+    width: auto;
+    vertical-align: top;
+}
+
+.form-register-with-email .form-row .form-checkbox span{
+    font-size: 12px;
+    font-weight: normal;
+    display: inline-block;
+    text-align: left;
+    width: 220px;
+    margin: 0;
+}
+
+.form-register-with-email .form-checkbox span a{
+    text-decoration: none;
+    color:  #6caee0;
+}
+
+.form-register-with-email button{
+    display: block;
+    border-radius: 2px;
+    background-color:  #6caee0;
+    color: #ffffff;
+    font-weight: bold;
+    box-shadow: 1px 2px 4px 0 rgba(0, 0, 0, 0.08);
+    padding: 15px 35px;
+    border: 0;
+    margin: 55px auto 0;
+    cursor: pointer;
+}
+
+.form-register-with-email .form-log-in-with-existing{
+    text-decoration: none;
+    padding: 4px 8px;
+    font-weight: normal;
+    color: #7b9d62;
+    background-color: #d6f0c3;
+}
+
+/* Styling the Admin Page */
+.meetup-list {
+    color: black;
+    margin-left: 1em;
+    box-sizing: border-box;
+    border-bottom: 2px solid black;
+}
+
+.meetup-list img {
+    float: left;
+    padding: 0;
+    width: 13em;
+    height: 13rem;
+    margin: 0 5% 5% 1em;
+
+}
+.meetup-name {
+    font-size: 1.2em;
+    font-family: Verdana, sans-serif;
+    text-decoration: underline;
+    margin: .1em;
+    padding: .1em;
+}
+
+.meetup-info {
+    font-family: 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: .9em;
+    padding: .3em;
+    margin: .3em;
+}
+.members {
+    float: right;
+    padding-right: 0;
+    margin-right: 0;
+}
+.location {
+    float: left;
+    text-align: left;
+}
+
+/* Styling the User Profile Page */
+.main-panel-profile{
+  width: 70%;
+  background: azure;
+  color: black;
+  font-family: Helvetica;
+  float: left;
+  box-sizing: border-box;
+}
+.Profile-pics{
+  margin: 1em;
+  padding: .5em;
+  width: 15em;
+  height: 15em;
+  border: 2px solid black;
+}
+.Profile-pics img{
+  width: 90%;
+  height: 90%;
+  padding: .5em;
+}
+.Profile-image-section{
+  width: 20em;
+  float: left;
+}
+.profile-section{
+  border-bottom: 3px solid blue;
+  padding-bottom: 5em;
+}
+.profile-details h2, .my-upcoming-meetup h2{
+  font-family: Tahoma;
+  font-size: 2.8em;
+  margin: .5em 0 .1em 0;
+}
+hgroup h3{
+  font-family: Helvetica;
+  margin: 0;
+  font-size: 1.5em;
+}
+.profile-details p{
+  font-size: 1em;
+}
+
+figure#profile-meetup-image {
+    display: block;
+    width: 18em;
+    height: 16em;
+    background-color: #3db2e1;
+    padding: 3px;text-align: center;
+    margin: 1em;
+    float: left;
+}
+
+figure#profile-meetup-image img {
+    width: 97.5%;
+    height: 80%;
+    border: 1px solid #d6d6d6;
+}
+
+figure#profile-meetup-image figcaption {
+    background-image: url("images/icon.png");
+    background-repeat: no-repeat;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    text-align: center;
+    color: red;
+}
+.upcoming-meetup-details{
+  padding-top: 3em;
+}
+
+.right-side-bar-profile{
+  width: 30%;
+  /* height: 500px; */
+  background: white;
+  float: right;
+  box-sizing: border-box;
+
+}
+.right-side-bar-profile ol li{
+  padding: .6em;
+  border-bottom: 1px soild grey;
+  font-family: Helvetica Tahoma sans-serif;
+  font-size: 1em;color: blue;
+}
+
+
+/* Styling My_admin Page */
+.top-panel{
+  width: 100%;
+  height: 120px;
+  background: #3db2e1;
+  color: white;
+  margin-top: 10px;
+}
+.side-bar{
+  width: 15%;
+  height: 400px;
+  background: #20B2AA;
+  float: left;box-sizing: border-box;
+}
+.main-panel{
+  width: 50%;
+  background: azure;
+  color: black;
+  font-family: Helvetica;float: left;
+  box-sizing: border-box;
+}
+.right-side-bar{
+  width: 30%;
+  height: 500px;
+  background: rgba(0, 191, 225, 0.1);
+  float: right;
+  box-sizing: border-box;
+
+}
+#adminLogo{
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+}
+.top-panel h4{
+  margin: 0;
+  padding: 0;
+  font-size: 20px;
+}
+.side-bar ul{
+  padding: 0px;
+}
+.side-bar ul li{
+  padding: 20px;
+  font-size: 20px;
+  border-bottom: 2px solid grey;
+  list-style: none;
+}
+.side-bar ul li:hover {
+  background: white;
+}
+.main-panel h1{
+  margin-top: 0;
+}
+
+.right-side-bar h3{
+  background: white;
+  font-size: 32px;
+  font-family: sans-serif;
+  padding-top: 0;
+  margin-bottom: 10px
+}
+.my-form .form-row{
+    text-align: left;
+    margin-bottom: 2em;
+}
+.my-form .form-row > label span{
+    display: inline-block;
+    box-sizing: border-box;
+    color:  black;
+    width: 125px;
+    text-align: right;
+    padding-right: 1.5em;
+}
+
+.my-form input{
+    color:  black;
+    background-color: white;
+    box-sizing: border-box;
+    font-size: 1em;
+    width: 230px;
+    box-shadow: 1px 2px 4px 0 rgba(0, 0, 0, 0.08);
+    padding: 10px 12px;
+    border: 1px solid #dbdbdb;
+}
+.pic-box{
+  width: 120px;
+  height: 120px;
+  border: 2px solid red;
+  background: white;
+}
+.btn-upload-pic, .btn-delete{
+  display: block;
+  border-radius: 2px;
+  background-color:  #777;
+  font-weight: bold;
+  box-shadow: 1px 2px 4px 0 rgba(0, 0, 0, 0.08);
+  padding: 5px 15px;
+  border: 0;
+  margin: 5px auto 0;
+  cursor: pointer;
+}
+.btn-delete{
+  background-color: #4169E1;
+  margin: 2em;
+
+}
+.btn-delete:hover{
+  background: red;
+}
+
+/* Styling dashboard page */
+.dashboard{
+  width: 80%;
+  margin: 1em 10% 20px 10%;
+
+}
+.right-dashboard{
+  width: 30%;
+}
+.my-meetup-details{
+  margin-top: 10px;
+}
+h3#heading{
+  text-align: center;
+  font-size: 2em;
+  margin: 10px auto 5px auto;
+}
+.my-meetup-title img{
+  width: 15%;
+  float: left;
+  margin-right: 5px;
+  margin-left: 20px;
+}
+.my-meetup-name{
+  margin: 0 0 10px 0;
+  font-size: 2rem;
+
+}
+
+.info{
+  font-size: 1em;
+  font-family: Impact;
+
+}
+.members{
+  float: right;
+  margin-right: 10em;
+}
+.dashboard h5{
+  font-size: 1.5em;
+  text-align: center;
+  text-decoration: underline;
+  margin: 0;
+  padding: 0;
+}
+
+.question-feed{
+  width: 80%;
+  display: inline-block;
+  box-sizing: border-box;
+  background-color: #ffffff;
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.2);
+  padding: 3em 4em;
+  margin: 1em 10% 1em 10%;
+  /* border-bottom: 2px solid grey; */
+}
+
+.question-feed figure{
+  padding: 0;
+  margin: 0;
+  float: left;
+  margin-right: .5em;
+}
+.question-feed figcaption{
+  font-size: .8em;
+}
+
+.question-feed figure img{
+    width: 3em;
+    height: 3em;
+    border-radius: 50%;
+}
+.dashboard h4{
+  padding: 0 .4em;
+  float: left;
+  max-width: 80%;
+}
+.vote-button{
+  float: right; */
+  margin-right: .6em;
+}
+.vote-button .up, .vote-button .down{
+  display: inline;
+  margin: .5em;
+  margin-top: 0;
+  width: 3em;
+  height: 2em;
+  font-size: 1.2em;
+}
+.comment{
+  margin-left: 4em;
+}
+/* .comment img{
+  width: 1em;
+  height: 1em;
+} */
+.comment textarea{
+  width: 95%;
+  height: auto;
+  padding: .5em;
+  font-size: 1.2em;
+  background-color: #fff;
+  border: 1px solid #bbb;
+  border-radius: 4px;
+}
+.btn-post{
+  padding: 5px auto;
+    color: #fff;
+    background-color: #777;
+    font-size: .8em;
+    text-align: center;
+    font-weight: bold;
+    border-radius: 3px;
+    width: 8rem;
+    height: 30px;
+    border: 1px solid #000;
+    border-width: 1px 1px 3px;
+    box-shadow: 0 -3px 0 rgba(255, 255, 255, 0.1) inset;
+    margin-right: 4px;
+    margin-bottom: 1px;
+}
+.view-comment{
+  margin-left: 4em;
+  margin-top: .3em;
+  width: 89%;
+  height: 10em;
+  border: 1px solid grey;
+}
+.add-question{
+  width: 80%;
+  margin-left: 6.5em;
+  padding-left: 0;
+}
+.add-question input{
+  width: 83%;
+  height: 1.7em;
+  margin-top:2px;
+  background: white;
+  font-size: 1em;
+  border: 1px solid black;
+}
+
+/* The footer section */
+footer {
+    background-color: #3db2e1;
+    padding: 2px auto 3px auto;
+    text-align: center;
+}
